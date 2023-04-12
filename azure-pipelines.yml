@@ -56,3 +56,24 @@ steps:
       # Write your PowerShell commands here.
       
       Write-Host "Hello World powershell"
+
+-task: 
+condition: succeededOrFailure(), Succeeded(), failed(), 
+continueOnError: 
+enabled:
+timeoutinminutes:
+target:
+inputs:
+
+- task:
+displayName:
+Condition: 
+retryCountOnFailure: 
+inputs:
+continueOnError:
+targets: 
+env:
+  testEnv: $()
+
+
+  
